@@ -1,1 +1,0 @@
-# egov-ua-devops
