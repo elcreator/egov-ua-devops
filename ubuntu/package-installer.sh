@@ -11,7 +11,7 @@ function action()
     local COMMAND=$2
     local DELIMITER=`for i in {1..80}; do echo -n "="; done`
     echo -e "\n${DELIMITER}\n| ${LABEL}...\n${DELIMITER}"
-    ${COMMAND}
+    eval "${COMMAND}"
     local RESULT=$?
     echo -en "\n${DELIMITER}\n| ...${LABEL} [ "
     if [[ "${RESULT}" == 0 ]]
